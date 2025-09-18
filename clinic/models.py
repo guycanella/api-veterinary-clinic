@@ -10,6 +10,10 @@ class Gender(models.TextChoices):
     MALE = 'M', 'Male'
     FEMALE = 'F', 'Female'
 
+class Species(models.TextChoices):
+    DOG = 'd', 'Dog'
+    CAT = 'c', 'Cat'
+
 # Create your models here.
 class Owner(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -43,6 +47,7 @@ class Pet(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
     gender = models.CharField(max_length=1, choices=Gender.choices)
+    species = models.CharField(max_length=1, choices=Species.choices)
     breed = models.CharField(max_length=100)
     birth_date = models.DateField(blank=True, null=True)
     owner = models.ForeignKey(Owner, related_name='pets', on_delete=models.CASCADE)
