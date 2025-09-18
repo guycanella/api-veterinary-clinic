@@ -1,0 +1,69 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env
+.env.* 
+.venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+.junit.xml
+pytest_cache/
+
+# Django stuff:
+*.sqlite3
+*.log
+local_settings.py
+db.sqlite3
+
+# Migrations (keep migrations in repo!) 
+# (comentado de propósito: geralmente é bom versionar migrations)
+# **/migrations/*.py
+# **/migrations/*.pyc
+
+# Editors and OS
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Python-specific caches
+.mypy_cache/
+.pytest_cache/
+
+# Build artifacts
+*.pyc
+*.pyo
+*.pyd
+
+# staticfiles
+staticfiles/
+
+# Docker
+docker-compose.override.yml
+
+# Secrets (just in case)
+*.key
+*.pem
