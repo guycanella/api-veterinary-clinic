@@ -23,6 +23,10 @@ CAT_BREEDS = [
     "Sphynx", "British Shorthair", "Scottish Fold", "Not defined"
 ]
 
+def only_digits(s: str) -> str:
+    """Remove everything that is not digit (returns empty string if None)."""
+    return re.sub(r'\D', '', s or '')
+
 def random_species_and_breed():
     if random.random() < 0.6:
         return Species.DOG, random.choice(DOG_BREEDS)
