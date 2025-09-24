@@ -50,7 +50,7 @@ ps:
 	docker-compose ps
 
 test:
-	$(VENV)/bin/pytest -q
+	$(VENV)/bin/pytest -q -vv -s
 
 lint:
 	$(VENV)/bin/flake8 .
